@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellect Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img id="logo" src="./images.jpg" alt="Intellect Logo">
+
+    <h1>Intellect Employee Dashboard</h1>
+
+    <!-- Login & Signup Section -->
+    <div id="authContainer">
+        <form id="authForm">
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <p id="errorMessage" style="color: red; display: none;"></p>
+
+            <button type="submit" id="loginBtn">Login</button>
+            <button type="button" id="signupBtn">Sign Up</button>
+
+            <p id="forgotPassword" style="display: none;">
+                Forgot Password? <a href="#" id="changePassword">Change Password</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- Signup Section (Initially Hidden) -->
+    <div id="signupSection" style="display: none;">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <input type="email" id="signupEmail" placeholder="Enter Email" required>
+            <input type="password" id="signupPassword" placeholder="Enter Password" required>
+            <input type="password" id="confirmPassword" placeholder="Re-enter Password" required>
+            <p id="passwordError" style="color: red; display: none;">Passwords do not match!</p>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+
+    <!-- Dashboard Section (Initially Hidden) -->
+    <div id="dashboardSection" style="display: none;">
+        <button id="logoutBtn">Logout</button>
+        <h3>Enter Employee Details</h3>
+        <form id="employeeForm">
+            <input type="text" id="employeeName" placeholder="Employee Name" required>
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <input type="text" id="jobTitle" placeholder="Designation" required>
+            <input type="text" id="status" placeholder="Status (Active/Inactive)" required>
+            <input type="number" id="salary" placeholder="Salary ($)" required>
+            <input type="date" id="joiningDate" required>
+            <input type="date" id="leavingDate">
+            <button type="submit">Add Employee</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Company Name</th>
+                    <th>Designation</th>
+                    <th>Status</th>
+                    <th>Salary</th>
+                    <th>Joining Date</th>
+                    <th>Leaving Date</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
