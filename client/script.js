@@ -1,5 +1,5 @@
-// API endpoints
-const API_URL = "https://your-backend-url.com";  // Replace with your backend URL
+// Use the relative path to the API (since it's hosted as part of the same static web app)
+const API_URL = "/api";  // Now pointing to the API endpoint of the Azure Static Web App
 
 // Elements
 const authForm = document.getElementById("authForm");

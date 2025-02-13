@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    justify-content: center; /* Center the content vertically */
 }
 
 /* Logo */
@@ -22,7 +23,7 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin-top: 10px;
+    margin-top: 20px;  /* Added space above the title */
 }
 
 /* Authentication Container */
@@ -44,6 +45,14 @@ input {
     border-radius: 8px;
     border: 1px solid gray;
     font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus State for Inputs */
+input:focus {
+    border-color: #007bff; /* Highlight input field border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
 }
 
 /* Buttons */
@@ -56,7 +65,7 @@ button {
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
     margin-top: 10px;
 }
 
@@ -68,4 +77,22 @@ button:hover {
 #errorMessage {
     color: red;
     font-size: 14px;
+    margin-top: 10px; /* Added space above error message */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    /* Make sure form is still usable on smaller screens */
+    #authContainer {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;  /* Slightly smaller heading */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button text size */
+    }
 }
